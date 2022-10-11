@@ -46,7 +46,7 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
+    favicon: "apple-icon.png"
     favicon16x16: "<link / abs url>"
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "<link / abs url>"
@@ -79,13 +79,13 @@ params:
     imageWidth: 200
     imageHeight: 200
     imageTitle: vikram-sahu - software engineer & developer advocate 
-    # buttons:
-    #   - name: Posts
-    #     url: posts
-    #   - name: Tags
-    #     url: tags
-    #   - name: Videos
-    #     url: videos
+    buttons:
+      - name: Posts
+        url: blogs
+      - name: talks
+        url: videos-and-talks
+      - name: photo-gallery
+        url: image-gallery
 
   socialIcons:
     - name: twitter
@@ -126,9 +126,13 @@ menu:
       name: Blogs
       url: /blogs/
       weight: 1
-    - identifier: videos/talks
-      name: Videos/Talks
-      url: /videos-and-talks/
+    - identifier: Talks
+      name: Talks
+      url: /talks/
+      weight: 2
+    - identifier: Images
+      name: Images
+      url: /image-gallery/
       weight: 2
     - identifier: categories
       name: Categories
