@@ -1,4 +1,149 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: Vikram Sahu
 theme: "PaperMod"
+module:
+  imports:
+    - path: github.com/ivikramsahu/vikramsahu.in
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Vikram Sahu
+  description: "ExampleSite description"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  ShowShareButtons: true
+  ShareButtons: ["linkedin", "twitter","reddit","facebook","whatsapp","telegram"]
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "<link / abs url>"
+    favicon16x16: "<link / abs url>"
+    favicon32x32: "<link / abs url>"
+    apple_touch_icon: "<link / abs url>"
+    safari_pinned_tab: "<link / abs url>"
+
+  label:
+    text: "Home"
+    icon: /apple-icon.png
+    iconHeight: 35
+
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Vikram Sahu
+    subtitle:
+      "
+      ------------------------------------------------------------------
+
+      Developer Relations @**[NetcoreCloud](https://netcorecloud.com)** || ex-**[Postman](https://getpostman.com)**.
+
+
+      Mainly into golang & python, loves talking about APIs.
+
+
+      Currently, building _free_ **360° Email Deliverabilty tool** ➙ https://grademyemail.co
+      
+      
+      -------------------------------------------------------------------
+      "
+    imageUrl: "https://avatars.githubusercontent.com/u/32266548?v=4"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: vikram-sahu - software engineer & developer advocate 
+    # buttons:
+    #   - name: Posts
+    #     url: posts
+    #   - name: Tags
+    #     url: tags
+    #   - name: Videos
+    #     url: videos
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/ivikramsahu"
+    - name: stackoverflow
+      url: "https://stackoverflow.com/ivikramsahu"
+    - name: github
+      url: "https://github.com/ivikramsahu"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/ivikramsahu/"
+    - name: RSS
+      url: index.xml
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+
+  editPost:
+    URL: "https://github.com/ivikramsahu/vikramsahu.in/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: blogs
+      name: Blogs
+      url: /blogs/
+      weight: 1
+    - identifier: videos/talks
+      name: Videos/Talks
+      url: /videos-and-talks/
+      weight: 2
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 3
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 4
+    - identifier: search
+      name: 🔎 Search
+      url: /search/
+      weight: 5
+
+    # - identifier: example
+    #   name: example.org
+    #   url: https://example.org
+    #   weight: 30
